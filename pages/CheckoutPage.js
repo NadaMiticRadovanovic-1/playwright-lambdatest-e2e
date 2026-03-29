@@ -19,6 +19,7 @@ export class CheckoutPage {
 
         // Success
         this.successHeading = page.getByRole("heading", { name: "Your order has been placed!" });
+        this.continueAfterSuccess = page.getByRole("link", { name: "Continue" });
     }
 
     async fillBillingDetails(data) {
@@ -64,5 +65,7 @@ export class CheckoutPage {
     async expectOrderSuccess() {
         await this.page.waitForLoadState("domcontentloaded");
         await expect(this.successHeading).toBeVisible({ timeout: 10000 });
+        await expect(this.continueAfterSuccess).toBeVisible();
+        await expect(this.page).toHaveURL(/checkout\/success/);
     }
 }

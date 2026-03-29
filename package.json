@@ -1,7 +1,8 @@
 {
-  "name": "playwright-demoblaze-e2e",
+  "name": "playwright-lambdatest-e2e",
   "version": "1.0.0",
-  "description": "End-to-end test automation project built with Playwright (JavaScript) for the Demoblaze e-commerce demo site. Covers login, cart, and checkout flows.",
+  "type": "module",
+  "description": "End-to-end test automation project built with Playwright (JavaScript) for the LambdaTest e-commerce playground. Covers login, cart, and checkout flows.",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
@@ -10,5 +11,9 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.6"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "dotenv": "^17.3.1"
   }
 }
