@@ -2,8 +2,18 @@
 
 End-to-end (E2E) automation testing project built with **Playwright** in **JavaScript**, using the public e-commerce demo site **ecommerce-playground.lambdatest.io**.
 
-This project demonstrates a complete "happy path" purchase flow:
-**Login → Add product to cart → Checkout → Fill billing details → Order confirmation**
+This project covers both positive and negative end-to-end test flows across the full purchase journey.
+
+## Test Coverage
+
+| # | Type | Description |
+|---|------|-------------|
+| 1 | Positive | Login, add a random product to cart, complete full checkout |
+| 2 | Positive | Login, add multiple different products to cart, complete full checkout |
+| 3 | Negative | Login with invalid credentials — verify error message is shown |
+| 4 | Negative | Login, empty the cart, attempt checkout — verify empty cart warning |
+
+All 4 tests run across **Chromium, Firefox, and WebKit** (12 tests total).
 
 ---
 
